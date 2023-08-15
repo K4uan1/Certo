@@ -56,11 +56,11 @@ body{
 button {
     background: #ffffff;
     border: none;
-    padding: 10px 20px;
+    padding: 8px 16px;
     display: inline-block;
     font-size: 15px;
     font-weight: 650;
-    width: 52vh;
+    max-width: 300px;       /*ajustar tamanho */
     text-transform: uppercase;
     text-align: center;
     cursor: pointer;
@@ -107,3 +107,7 @@ button {
     bottom: 0;
     width: 100%;
 }
+
+
+
+
