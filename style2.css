@@ -38,10 +38,10 @@
   
   .container {
     display: flex;
-    padding: 20px;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    padding: 20px;
   }
   
   #searchInput {
@@ -53,9 +53,9 @@
   
   
   .scrollButton {
-    
+    background-color: #3498db;
     flex: 1;
-    width: calc(20% - 20px); /* Garante até 5 botões por linha com espaço entre eles */
+    width: calc(20%); /* Garante até 5 botões por linha com espaço entre eles */
     margin: 5px;
     padding: 10px;
     font-size: 16px;
@@ -63,6 +63,7 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
+    text-align: center;
   }
   
   .scrollButton:hover {
