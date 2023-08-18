@@ -48,8 +48,9 @@
   
   
   .scrollButton {
+    
     flex: 1;
-    width: calc(20% - 15px); /* Garante até 5 botões por linha com espaço entre eles */
+    width: calc(20% + 20px); /* Garante até 5 botões por linha com espaço entre eles */
     margin: 5px;
     padding: 10px;
     font-size: 16px;
