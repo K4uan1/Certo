@@ -49,7 +49,7 @@
   
   .scrollButton {
     flex: 1;
-    width: calc(20% - 20px); /* Garante até 5 botões por linha com espaço entre eles */
+    width: calc(20% - 15px); /* Garante até 5 botões por linha com espaço entre eles */
     margin: 5px;
     padding: 10px;
     font-size: 16px;
@@ -93,43 +93,47 @@
   
   
   
-  .group {
-   display: flex;
-   line-height: 28px;
-   align-items: center;
-   position: relative;
-   max-width: 190px;
-  }
-  
-  .input {
-   width: 100%;
-   height: 40px;
-   line-height: 28px;
-   padding: 0 1rem;
-   padding-left: 2.5rem;
-   border: 2px solid transparent;
-   border-radius: 8px;
-   outline: none;
-   background-color: #f3f3f4;
-   color: #0d0c22;
-   transition: .3s ease;
-  }
-  
-  .input::placeholder {
-   color: #9e9ea7;
-  }
-  
-  .input:focus, input:hover {
-   outline: none;
-   border-color: rgba(234,76,137,0.4);
-   background-color: #fff;
-   box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
+  .input-container {
+    width: 98%;
+    position: relative;
   }
   
   .icon {
-   position: absolute;
-   left: 1rem;
-   fill: #9e9ea7;
-   width: 1rem;
-   height: 1rem;
+    position: absolute;
+    right: 10px;
+    top: calc(50% );
+    transform: translateY(calc(-50% - 5px));
+
+  }
+  
+  .input {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    transition: .2s linear;
+    border: 2.5px solid black;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .input:focus {
+    outline: none;
+    border: 0.5px solid black;
+    box-shadow: -5px -5px 0px black;
+  }
+  
+  .input-container:hover > .icon {
+    animation: anim 1s linear infinite;
+  }
+  
+  @keyframes anim {
+    0%,
+    100% {
+      transform: translateY(calc(-50% - 5px)) scale(1);
+    }
+  
+    50% {
+      transform: translateY(calc(-50% - 5px)) scale(1.1);
+    }
   }
