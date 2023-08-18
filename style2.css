@@ -33,7 +33,7 @@
   body {
     margin: 0;
     font-family: Arial, sans-serif;
-    
+    background-color: #BFBFBF;
   }
   
   .container {
@@ -45,17 +45,18 @@
   }
   
   #searchInput {
-    width: 100%;
     padding: 10px;
     margin-bottom: 20px;
     font-size: 16px;
+    background-color: #BFBFBF;
+    
   }
   
   
   .scrollButton {
-    background-color: #3498db;
+    background-color: #10403B;
     flex: 1;
-    width: calc(20%); /* Garante até 5 botões por linha com espaço entre eles */
+    width: calc(20% + 60px); /* Garante até 5 botões por linha com espaço entre eles */
     margin: 5px;
     padding: 10px;
     font-size: 16px;
@@ -64,6 +65,7 @@
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
     text-align: center;
+    color: white;
   }
   
   .scrollButton:hover {
@@ -99,41 +101,52 @@
   /* Adicione estilos para mais botões conforme necessário */
   
   
-  
-  .input-container {
-    width: 98%;
+  .group {
+    display: flex;
+    line-height: 28px;
+    align-items: center;
     position: relative;
-  }
-  
-  .icon {
-    position: absolute;
-    right: 10px;
-    top: calc(50% );
-    transform: translateY(calc(-50% - 5px));
-
-  }
-  
-  .input {
-    width: 100%;
+    max-width: 190px;
+   }
+   
+   .input {
+    width: 98.8%;
     height: 40px;
-    padding: 10px;
-    transition: .2s linear;
-    border: 2.5px solid black;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
-  
-  .input:focus {
+    line-height: 28px;
+    padding: 0 1rem;
+    padding-left: 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
     outline: none;
-    border: 0.5px solid black;
-    box-shadow: -5px -5px 0px black;
-  }
-  
-  .input-container:hover > .icon {
-    animation: anim 1s linear infinite;
-  }
-  
+    background-color: #f3f3f4;
+    color: #0d0c22;
+    transition: .3s ease;
+    
+   }
+   
+   .input::placeholder {
+    color: #9e9ea7;
+   }
+   
+   .input:focus, input:hover {
+    outline: none;
+    border-color: #10403B;
+    background-color: #fff;
+   }
+   
+   .icon {
+    position: absolute;
+    left: 1rem;
+    fill: #9e9ea7;
+    width: 1rem;
+    height: 1rem;
+   }
+   
+   
+   
+   
+   
+   
   @keyframes anim {
     0%,
     100% {
@@ -149,6 +162,19 @@
     .scrollButton{
       font-size: 14px;
     }
-
+    .scrollButton {
+      background-color: #10403B;
+      flex: 1;
+      width: calc(20%); /* Garante até 5 botões por linha com espaço entre eles */
+      margin: 5px;
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+      text-align: center;
+      color: white;
+    }
 
   }
