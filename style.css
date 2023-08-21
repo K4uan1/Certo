@@ -1,109 +1,140 @@
-
-
-/* Estilos dos botões */
-
-
-/* Exemplos de estilos diferentes para os botões */
-
-  
-  body {
+/* Reset de estilos básicos */
+body, h1, h2, h3, p, ul, li {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #BFBFBF;
+    padding: 0;
+
+
   }
-  
-  .container {
+
+body{
+  min-height: 100vh;
+  background-color: #BFBFBF;
+
+
+    background-image: url(parallax-home.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+  /* Estilos da barra de navegação */
+  .nav-bar {
+    background-color: #10403B;
+    color: #fff;
+    padding: 0.5%;
+  }
+
+  .nav-bar nav ul {
+    list-style: none;
+    text-align: center;
+  }
+
+  .nav-bar nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+  }
+
+  .nav-bar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  /* Estilos da seção principal */
+  main {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     padding: 20px;
+
   }
 
-  
-  
-  .scrollButton {
-    background-color: #10403B;
-    flex: 1;
-    width: calc(20% + 60px); /* Garante até 5 botões por linha com espaço entre eles */
-    margin: 5px;
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    text-align: center;
-    color: white;
-  }
-  
-  
-  .group {
+  section {
     display: flex;
-    line-height: 28px;
-    align-items: center;
-    position: relative;
-    max-width: 190px;
-   }
-   
-   * Estilos para a linha de pesquisa e seleção */
-.search-select-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-
-/* Estilos para o campo de pesquisa */
-#searchInput {
-  flex: 1;
-  padding: 8px;
-  border: 1px solid #000000;
-  border-radius: 4px;
-  background-color: transparent;
-  width: 70%;
-}
-
-/* Estilos para o campo de seleção */
-#filterSelect {
-    flex: 1;
-    padding: 8px;
-    border: 1px solid #000000;
-    border-radius: 4px;
     background-color: transparent;
-    width: 14%;
+    height: 80vh;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+
 }
-   
-   
-   
-  @keyframes anim {
-    0%,
-    100% {
-      transform: translateY(calc(-50% - 5px)) scale(1);
-    }
-  
-    50% {
-      transform: translateY(calc(-50% - 5px)) scale(1.1);
-    }
+
+
+button {
+    background: #223077;
+    border: none;
+    padding: 8px 16px;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 650;
+    width: 1000px;
+    max-width: 500px;       /*ajustar tamanho */
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    transform: skew(-21deg);
+    margin: 10px 0;
+    color:white;
   }
 
-  @media (max-width: 768px) {
-    .scrollButton{
-      font-size: 14px;
-    }
-    .scrollButton {
-      background-color: #10403B;
-      flex: 1;
-      width: calc(20%); /* Garante até 5 botões por linha com espaço entre eles */
-      margin: 5px;
-      padding: 10px;
-      font-size: 16px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s, color 0.3s;
-      text-align: center;
-      color: white;
-    }
-
+  span {
+    display: inline-block;
+    transform: skew(21deg);
   }
+
+  button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    left: 0;
+    background: rgb(20, 20, 20);
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.5s;
+  }
+
+  button:hover {
+    color: #fff;
+  }
+
+  button:hover::before {
+    left: 0;
+    right: 0;
+    opacity: 1;
+  }
+
+  /* Estilos do rodapé */
+  footer {
+    background-color: #10403B;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+
+@media (max-width: 768px) {
+
+button {
+  background: #223077;
+  border: none;
+  padding: 8px 16px;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 650;
+  width: 200px;
+  max-width: 500px;       /*ajustar tamanho */
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  transform: skew(-21deg);
+  margin: 10px 0;
+  color:white;
+} 
+}

@@ -4,33 +4,9 @@
 
 
 /* Exemplos de estilos diferentes para os botões */
-.scrollButton:hover {
-    background-color: #3498db;
-    color: white;
-  }
+
   
-  .scrollButton.alt {
-    background-color: #e74c3c;
-    color: white;
-  }
-  
-  .scrollButton.success {
-    background-color: #2ecc71;
-    color: white;
-  }
-  
-  .scrollButton.warning {
-    background-color: #f39c12;
-    color: white;
-  }
-  
-  .scrollButton.info {
-    background-color: #3498db;
-    color: white;
-  }
-  
-  
-  body {
+body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #BFBFBF;
@@ -43,14 +19,7 @@
     justify-content: center;
     padding: 20px;
   }
-  
-  #searchInput {
-    padding: 10px;
-    margin-bottom: 20px;
-    font-size: 16px;
-    background-color: #BFBFBF;
-    
-  }
+
   
   
   .scrollButton {
@@ -68,38 +37,6 @@
     color: white;
   }
   
-  .scrollButton:hover {
-    background-color: #3498db;
-    color: white;
-  }
-  
-  .scrollButton.alt {
-    background-color: #e74c3c;
-    color: white;
-  }
-  
-  .scrollButton.success {
-    background-color: #2ecc71;
-    color: white;
-  }
-  
-  .scrollButton.warning {
-    background-color: #f39c12;
-    color: white;
-  }
-  
-  .scrollButton.info {
-    background-color: #3498db;
-    color: white;
-  }
-  
-  
-  /* .scrollButton[data-number="1"] {
-    background-color: #e74c3c;
-  } */
-  
-  /* Adicione estilos para mais botões conforme necessário */
-  
   
   .group {
     display: flex;
@@ -109,41 +46,33 @@
     max-width: 190px;
    }
    
-   .input {
-    width: 98.8%;
-    height: 40px;
-    line-height: 28px;
-    padding: 0 1rem;
-    padding-left: 2.5rem;
-    border: 2px solid transparent;
-    border-radius: 8px;
-    outline: none;
-    background-color: #f3f3f4;
-    color: #0d0c22;
-    transition: .3s ease;
-    
-   }
-   
-   .input::placeholder {
-    color: #9e9ea7;
-   }
-   
-   .input:focus, input:hover {
-    outline: none;
-    border-color: #10403B;
-    background-color: #fff;
-   }
-   
-   .icon {
-    position: absolute;
-    left: 1rem;
-    fill: #9e9ea7;
-    width: 1rem;
-    height: 1rem;
-   }
-   
-   
-   
+   * Estilos para a linha de pesquisa e seleção */
+.search-select-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* Estilos para o campo de pesquisa */
+#searchInput {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  background-color: transparent;
+  width: 65%;
+}
+
+/* Estilos para o campo de seleção */
+#filterSelect {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    background-color: transparent;
+    width: 25%;
+}
    
    
    

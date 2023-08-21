@@ -1,3 +1,7 @@
+
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -7,17 +11,20 @@
   <title>coa</title>
 </head>
 <body>
-
-
-
-    <div class="input-container">
-        <input type="text" name="text" class="input" placeholder="Procurar..." id="searchInput">
-        
-
-      </div>
-  <!-- <input type="number" id="searchInput" placeholder="Search..."> -->
+  <div class="search-select-row">
+    <input type="text" id="searchInput" placeholder="Search...">
+    <select id="filterSelect">
+      <option value="all">Todos</option>
+      <option value="trucks1">Canavieiro </option>
+      <option value="bate">Bate Volta</option>
+      <option value="vinhaça">Vinhaça</option>
+      <option value="prancha">Prancha</option>
+    </select>
+  </div>
   <div id="buttonContainer">
-    <a href="https://docs.google.com/spreadsheets/d/1mTBaYgFmS3qPQbFxtC87xL1huaAXAONdgacAVK-pZtU/edit?usp=sharing"><button class="scrollButton" data-number="13064">13064</button></a>
+    <a href="#"><button class="scrollButton" data-number="13065" data-category="trucks1">13065</button></a>
+    <a href="#"><button class="scrollButton" data-number="130652" data-category="trucks1">13065</button></a>
+    <a href="https://docs.google.com/spreadsheets/d/1mTBaYgFmS3qPQbFxtC87xL1huaAXAONdgacAVK-pZtU/edit?usp=sharing"  value="trucks1"><button class="scrollButton" value="trucks1" data-number="13064">13064</button></a>
     <a href=""> <button class="scrollButton" data-number="13065">13065</button></a>
     <a href="https://docs.google.com/spreadsheets/d/1A0mOcuFp4I6TqQh0fBx_PVHCTWN0PFBSgWjrl6fbLus/edit#gid=0"> <button class="scrollButton" data-number="13071">13071</button></a>
     <a href="https://docs.google.com/spreadsheets/d/1WGLFVtRMakCtrqlJ1dRF19H1lAMUo-FQc9onxvG8LPs/edit?usp=drive_web&ouid=114263703887431074588"> <button class="scrollButton" data-number="13072">13072</button></a>
