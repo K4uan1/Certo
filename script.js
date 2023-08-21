@@ -1,32 +1,27 @@
 const searchInput = document.getElementById('searchInput');
+const filterSelect = document.getElementById('filterSelect');
 const scrollButtons = document.querySelectorAll('.scrollButton');
 
-searchInput.addEventListener('input', () => {
+searchInput.addEventListener('input', filterButtons);
+filterSelect.addEventListener('change', filterButtons);
+
+function filterButtons() {
   const query = searchInput.value.trim().toLowerCase();
+  const selectedCategory = filterSelect.value;
 
   scrollButtons.forEach(button => {
     const buttonNumber = button.getAttribute('data-number');
-    if (query === '' || buttonNumber.includes(query)) {
-      button.style.display = '';
+    const buttonCategory = button.getAttribute('data-category');
+    const isMatch = query === '' || buttonNumber.includes(query);
+
+    if (selectedCategory === 'all') {
+      button.parentElement.style.display = isMatch ? '' : 'none';
+    } else if (selectedCategory === buttonCategory) {
+      button.parentElement.style.display = isMatch ? '' : 'none';
     } else {
-      button.style.display = 'none';
+      button.parentElement.style.display = 'none';
     }
-  });
-});
-
-searchInput.addEventListener('blur', () => {
-  if (searchInput.value.trim() === 'block') {
-    showAllButtons();
-  }
-});
-
-function showAllButtons() {
-  scrollButtons.forEach(button => {
-    button.style.display = 'block';
   });
 }
 
-
-// não mexer!!!!!!!!!!!!
-
- 
+filterButtons(); // Executa inicialmente
